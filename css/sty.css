@@ -1,0 +1,618 @@
+/* Customize the label (the container) */
+.container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 20;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  /* On mouse-over, add a grey background color */
+  .container-checkbox:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container-checkbox input:checked ~ .checkmark {
+    background-color: #e8b43f;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container-checkbox input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container-checkbox .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+
+  /* checout */
+  /* General Style */
+.checkout-area {
+  padding: 80px 0;
+}
+
+.checkout-area .section-title h2 {
+  color: #e8b43f;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.informasi-checkout {
+  background-color: transparent;
+  padding: 20px;
+  border: 2px dashed #e8b43f;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #e8b43f;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Card Style Buku */
+.card-buku {
+  border: 2px solid #e8b43f;
+  border-radius: 10px;
+  padding: 15px;
+  transition: 0.3s;
+  background-color: transparent;
+}
+
+.card-buku:hover {
+  background-color: #e8b43f;
+  color: #fff;
+}
+
+.card-buku img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #e8b43f;
+}
+
+.card-buku .nama-buku {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card-buku .form-check-input {
+  width: 20px;
+  height: 20px;
+  accent-color: #e8b43f;
+}
+
+/* Button Checkout */
+.btn-checkout {
+  background-color: #e8b43f;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-checkout:hover {
+  background-color: #d49e32;
+  color: #fff;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .card-buku img {
+      height: 150px;
+  }
+}
+
+/* Card Container */
+.book-card {
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: var(--bs-card-bg, #ffff);
+  overflow: hidden;
+  position: relative;
+}
+
+.book-card:hover {
+  border-color: #e8b43f;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transform: translateY(-4px);
+}
+
+/* Gambar Buku */
+.book-img img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+.img-hover-zoom:hover {
+  transform: scale(1.07);
+}
+
+/* Judul Buku */
+.card-title {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--bs-body-color, #333);
+}
+
+/* Checkbox Style */
+.checkbox-buku {
+  width: 18px;
+  height: 18px;
+  accent-color: #e8b43f;
+  cursor: pointer;
+}
+
+/* Label Checkbox */
+.form-check-label {
+  font-size: 14px;
+  color: var(--bs-body-color, #555);
+  cursor: pointer;
+}
+
+/* Responsive Gambar */
+@media (max-width: 576px) {
+  .book-img img {
+      height: 170px;
+  }
+}
+
+/* Info Text di Atas List Buku */
+.pesan-info {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--bs-body-color, #444);
+  background-color: rgba(232, 180, 63, 0.12);
+  padding: 12px 20px;
+  border-left: 4px solid #e8b43f;
+  border-radius: 6px;
+  margin-bottom: 24px;
+}
+
+/* ===== Footer Perpustakaan ===== */
+.footer-widget {
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.footer-widget h3 {
+  color: #e8b43f;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer-widget p {
+  color: #ddd;
+  font-size: 14px;
+}
+
+.footer-list,
+.footer-list-contact,
+.footer-work-hour-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-list li,
+.footer-list-contact li,
+.footer-work-hour-list li {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-list a,
+.footer-list-contact a {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-list a:hover,
+.footer-list-contact a:hover {
+  color: #e8b43f;
+}
+
+.footer-list-contact i {
+  margin-right: 8px;
+  color: #e8b43f;
+}
+
+.social-link {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.social-link a {
+  color: #e8b43f;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.social-link a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.copy-right-area {
+  border-top: 1px solid #444;
+  padding: 20px 0;
+  margin-top: 30px;
+}
+
+.copy-right-text p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.copy-right-text a {
+  color: #e8b43f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.copy-right-text a:hover {
+  color: #fff;
+}
+/* /edn footer */
+
+/* filter start */
+/* Bungkus Select */
+.kategori-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.kategori-wrapper h6 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #e8b43f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+/* Select Style */
+.custom-kategori {
+  appearance: none;
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #e8b43f;
+  border: 2px solid #b5892d;
+  border-radius: 8px;
+  color: #222;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* Animasi Smooth */
+  transition: 
+      background-color 0.3s ease, 
+      border-color 0.3s ease, 
+      transform 0.2s ease;
+}
+
+/* Hover / Fokus efek */
+.custom-kategori:hover,
+.custom-kategori:focus {
+  background-color: #f5c953;
+  border-color: #a57822;
+  transform: scale(1.03);  /* Sedikit membesar pas hover */
+  outline: none;
+}
+
+/* ,,,, */
+/* Option style */
+.nice-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FCD34D; /* warna kuning */
+  border: 2px solid #B8860B; /* kuning tua */
+  border-radius: 8px;
+  height: 50px;
+  padding: 0 40px 0 40px; /* space buat icon */
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+.nice-select:after {
+  right: 15px;
+  border-color: #000; /* warna icon panah */
+}
+
+.nice-select.open {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.nice-select .list {
+  z-index: 99;
+  position: absolute;
+  width: 100%;
+  background-color: #FCD34D;
+  border: 2px solid #B8860B;
+  border-radius: 8px;
+  margin-top: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.nice-select .list .option {
+  color: #222;
+  text-align: center;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nice-select .list .option:hover {
+  background-color: #FBBF24; /* hover lebih gelap */
+  color: #000;
+  cursor: pointer;
+}
+
+/* filter end */
+
+/* sp */
+.profile-info h6 {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.checkout-product li:hover {
+  background-color: #e8b43f;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* Style Avatar Pilihan */
+.avatar-checked {
+  border: 3px solid #28a745 !important;   /* hijau */
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.5);
+  transition: 0.3s ease;
+}
+
+.cart-number {
+  background-color: #fcd34d; /* kuning cerah */
+  color: #000;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.cart-number:hover {
+  background-color: #fbbf24; /* hover kuning tua */
+  transform: scale(1.1);
+}
+
+/* sp edn */
+
+
+/* CARD BUKU */
+.book-card {
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  padding: 16px;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* GAMBAR DI CARD */
+.book-card .book-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-card .book-img img:hover {
+  transform: scale(1.05);
+}
+
+/* CHECKBOX STYLING */
+.checkbox-buku {
+  width: 18px;
+  height: 18px;
+  background-color: #fcd34d;
+  border: 2px solid #fbbf24;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkbox-buku:checked {
+  background-color: #facc15 !important;
+  border-color: #eab308 !important;
+}
+
+
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.book-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.book-img img:hover {
+  transform: scale(1.05);
+}
+
+.custom-checkbox {
+  position: relative;
+}
+
+.custom-checkbox input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-checkbox label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  font-weight: 500;
+  user-select: none;
+}
+
+.custom-checkbox label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 4px;
+  border: 2px solid #fbbf24;
+  background-color: #f00606;
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label::before {
+  background-color: #facc15;
+  border-color: #eab308;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + label::after {
+  content: "✔";
+  position: absolute;
+  left: 4px;
+  top: -1px;
+  font-size: 14px;
+  color: #333;
+}
+
+
+.classic-pan{
+  color: #DAA520; 
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(to right, rgba(255, 215, 0, 0.08), rgba(255, 215, 0, 0.12));
+  padding: 8px 16px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.choose-card-three i {
+  font-size: 48px;
+  color: #fcd34d;
+}
+
+.section-title h2 {
+  font-weight: 700;
+  color: #333;
+}
+
+
+
+
+  /* .contact-cards {
+    background: #000000;
+    border: 2px solid #fcd34d;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .contact-cards:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: #facc15;
+  }
+
+  .contact-cards i {
+    font-size: 45px;
+    color: #f59e0b;
+  }
+
+  .contact-cards h3 {
+    font-size: 20px;
+    color: #01060e;
+  }
+
+  .span1 {
+    font-size: 15px;
+    color: #8f8d2a;
+  } */
